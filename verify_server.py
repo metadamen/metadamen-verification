@@ -1,5 +1,9 @@
 import os
 from flask import Flask, request, render_template
+import json
+
+with open("cert_counter.json") as f:
+    certs = json.load(f)
 
 app = Flask(__name__)
 
@@ -14,8 +18,9 @@ certs = {
 @app.route("/verify")
 def verify():
     cert = request.args.get("cert")
-    valid = cert in certs
     student = certs.get(cert)
+    valid = student is not None
+
     return render_template(
         "verify.html",
         cert=cert,

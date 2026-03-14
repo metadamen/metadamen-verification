@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 # Example certificate database
 certs = {
-    "CERT001": "Rahul Sharma",
-    "CERT002": "Priya Singh"
+    "1000127": "Rahul Sharma",
+    "1000128": "Priya Singh"
 }
 
 @app.route("/verify")

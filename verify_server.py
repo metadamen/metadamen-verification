@@ -30,5 +30,5 @@ def verify():
 
 if __name__ == "__main__":
     # Bind to the Render port
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 5050))
     app.run(host="0.0.0.0", port=port)

@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # Example certificate database
 certs = {
-    "1000127": "Rahul Sharma",
+    "1000125": "Khushi Kumari",
     "1000128": "Priya Singh"
 }
 

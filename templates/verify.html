@@ -1,21 +1,6 @@
-{% if valid %}
-
-<div class="badge valid">✔ Verified Certificate</div>
-
-<div class="info">
-
-<p><b>Name:</b> {{student.name}}</p>
-
-<p><b>Program:</b> {{student.program}}</p>
-
-<p><b>Certificate ID:</b> {{cert}}</p>
-
-<p><b>Issue Date:</b> {{student.issue_date}}</p>
-
-<p><b>Issued By:</b> {{student.issued_by}}</p>
-
-<p><b>Status:</b> Verified</p>
-
-</div>
-
-{% endif %}
+<p>Name: {{ student.name if student else '' }}</p>
+<p>Program: {{ student.program if student else '' }}</p>
+<p>Certificate ID: {{ cert }}</p>
+<p>Issue Date: {{ student.issue_date if student else '' }}</p>
+<p>Issued By: {{ student.issued_by if student else '' }}</p>
+<p>Status: {{ 'Verified' if valid else 'Invalid' }}</p>

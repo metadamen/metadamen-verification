@@ -2,8 +2,6 @@ import os
 from flask import Flask, request, render_template
 import json
 
-with open("cert_counter.json") as f:
-    certs = json.load(f)
 
 app = Flask(__name__)
 
@@ -14,6 +12,8 @@ certs = {
     "1000132": "Anjali Raj",
     "1000133": "Shobha Kumari"
 }
+with open("cert_counter.json") as f:
+    certs = json.load(f)
 
 @app.route("/verify")
 def verify():
